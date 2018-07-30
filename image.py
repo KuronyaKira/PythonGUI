@@ -1,15 +1,21 @@
 import tkinter as tk
 import tkinter.font as font
 
+nicoSW = False
 
 def pushed(self):
     self["text"] = '%sさん、こんにちは。' % textbox.get()
 
-
 def pushed2(self):
     self["text"] = 'にこでーす。'
 
-
+'''     if nicoSW == False:
+     nicoSW = True
+     self["text"] = 'にこでーす。'
+    else:
+     nicoSW = False
+     self["text"] = '' '''
+    
 # コメント出力
 print('ハラショー')
 
