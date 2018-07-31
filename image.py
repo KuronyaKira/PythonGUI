@@ -3,19 +3,22 @@ import tkinter.font as font
 
 nicoSW = False
 
+
 def pushed(self):
     self["text"] = '%sさん、こんにちは。' % textbox.get()
 
-def pushed2(self):
-    self["text"] = 'にこでーす。'
 
-'''     if nicoSW == False:
-     nicoSW = True
-     self["text"] = 'にこでーす。'
+def pushed2(self):
+    global nicoSW
+
+    if nicoSW == False:
+        nicoSW = True
+        self["text"] = 'にこでーす。'
     else:
-     nicoSW = False
-     self["text"] = '' '''
-    
+        nicoSW = False
+        self["text"] = ''
+
+
 # コメント出力
 print('ハラショー')
 
@@ -46,8 +49,14 @@ button.grid()
 
 # 画像表示場所の追加
 img = tk.PhotoImage(file='titlenico.png')
-button2 = tk.Button(root, command=lambda: pushed2(label2), width=300, height=300, relief=tk.RIDGE,
-                    bd=0, image=img)
+button2 = tk.Button(
+    root,
+    command=lambda: pushed2(label2),
+    width=300,
+    height=300,
+    relief=tk.RIDGE,
+    bd=0,
+    image=img)
 button2.grid()
 
 # ラベル2を追加
